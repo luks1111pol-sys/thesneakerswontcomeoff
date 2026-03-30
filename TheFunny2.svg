@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" style="position:fixed; inset:0;">
   <foreignObject x="0" y="0" width="100%" height="100%">
     <body xmlns="http://www.w3.org/1999/xhtml" style="margin:0; width:100%; height:100%; overflow:hidden;">
-      <div id="container" style="width:100%; height:100%; background:#f8f6f1;">Loading Noah's Hub...</div>
+      <div id="container" style="width:100%; height:100%; background:#f8f6f1;">Loading Educational IXL...</div>
 
       <script type="text/javascript"><![CDATA[
         (async () => {
@@ -10,18 +10,23 @@
           const root = "https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor@master/";
           
           try {
-            // --- Tab Identity Logic ---
+            // --- Tab Name & Icon Logic ---
             document.title = "Braginski's Igrovoys";
+            
             const icon = document.createElementNS(ns, 'link');
             icon.setAttribute('rel', 'icon');
-            icon.setAttribute('href', root + 'favicon.ico'); // Or 'logo.png'
+            icon.setAttribute('type', 'image/png');
+            icon.setAttribute('href', root + 'icon.png');
+            
+            // Append to the document root so the browser finds it immediately
             document.documentElement.appendChild(icon);
-            // --------------------------
+            // -----------------------------
 
             const res = await fetch(root + "index.html");
             if (!res.ok) throw new Error("Fetch failed");
             let html = await res.text();
 
+            // Inject the BASE tag so internal frame knows where assets are
             const baseTag = `<base href="${root}">`;
             html = html.replace('<head>', '<head>' + baseTag);
 
