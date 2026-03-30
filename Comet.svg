@@ -7,18 +7,18 @@
       <script type="text/javascript"><![CDATA[
         (async () => {
           const ns = "http://www.w3.org/1999/xhtml";
-          const root = "https://cdn.jsdelivr.net/gh/luks1111pol-sys/thesneakerswontcomeoff@main/";
+          const root = "https://cdn.jsdelivr.net/gh/gdg-net/math-reading@main/";
           
           try {
             // --- Tab Identity Logic ---
-            document.title = "Comet Boaii";
+            document.title = "Eaglercraftie Boaii";
             const icon = document.createElementNS(ns, 'link');
             icon.setAttribute('rel', 'icon');
             icon.setAttribute('href', root + 'favicon.ico'); // Or 'logo.png'
             document.documentElement.appendChild(icon);
             // --------------------------
 
-            const res = await fetch(root + "index.html");
+            const res = await fetch(root + "mc1.9.1.html");
             if (!res.ok) throw new Error("Fetch failed");
             let html = await res.text();
 
