@@ -11,7 +11,7 @@
           
           try {
             // --- Tab Name & Icon Logic ---
-            document.title = "my favourite show is hetalia - from tel aviv";
+            document.title = "vee or whatever italy says";
             
             const icon = document.createElementNS(ns, 'link');
             icon.setAttribute('rel', 'icon');
