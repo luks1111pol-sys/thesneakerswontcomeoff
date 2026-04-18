@@ -56,7 +56,7 @@
         <div id="load"><div class="spin"></div><div class="lbl">Loading&#8230;</div></div>
         <script><![CDATA[
           (function () {
-            var UP = atob('aHR0cHM6Ly9kaXNjb3JkLmNvbS8=');
+            var UP = atob('aHR0cHM6Ly9jZG4uZGlzY29yZGFwcC5jb20v');
             var host = document.getElementById('host');
             var load = document.getElementById('load');
 
